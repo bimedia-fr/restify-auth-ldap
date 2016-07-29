@@ -1,6 +1,6 @@
 {
   "name": "restify-auth-ldap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LDAP authentication middleware for restify",
   "main": "lib/index.js",
   "scripts": {
