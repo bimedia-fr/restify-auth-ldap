@@ -1,6 +1,6 @@
-# restify-auth-ldap [![Build Status](https://travis-ci.org/bimedia-fr/restify-auth-ldap.svg?branch=master)](https://travis-ci.org/bimedia-fr/restify-auth-ldap)
+# restify-auth-ldap [![Build Status](https://travis-ci.org/bimedia-fr/restify-auth-ldap.svg?branch=master)](https://travis-ci.org/bimedia-fr/restify-auth-ldap) [![NPM version](https://img.shields.io/npm/v/restify-auth-ldap.svg)](https://www.npmjs.com/package/restify-auth-ldap)
 
-Provide a LDAP authnetication middleware for restify
+Provide a LDAP authentication middleware for restify
 
 ### Installation
 
@@ -9,7 +9,16 @@ npm install --save restify-auth-ldap
 ```
 
 ### Usage
-Restify-auth-ldap need a cache instance to avoid to making too many requests to the LDAP server
+Restify-auth-ldap need a cache instance to avoid to making too many requests to the LDAP server.
+Only 
+```js
+cache.get(key);
+``` 
+and 
+```js
+cache.set(key, value);
+```
+methods are used.
 
 We recommend using the [lru-cache](https://github.com/isaacs/node-lru-cache)  lib.
 
@@ -27,7 +36,7 @@ var options = {
         opts : { // LDAP server config, passed to ldapjs instance
             url : 'ldap://127.0.0.1:389'
         },
-        user : {  // User is: uid=[USERNAME],ou=People,dc=is,dc=bimedia-dev,dc=com 
+        user : {  // UserDN is: uid=[USERNAME],ou=People,dc=is,dc=bimedia-dev,dc=com 
             DN : 'ou=People,dc=is,dc=bimedia-dev,dc=com',
             attribute : 'uid'
         },
