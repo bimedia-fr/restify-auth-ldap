@@ -1,0 +1,36 @@
+{
+  "name": "restify-auth-ldap",
+  "version": "0.0.1",
+  "description": "LDAP authentication middleware for restify",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "nodeunit test/test-*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bimedia-fr/restify-auth-ldap.git"
+  },
+  "homepage": "https://github.com/bimedia-fr/restify-auth-ldap",
+  "bugs": {
+    "url": "https://github.com/bimedia-fr/restify-auth-ldap/issues"
+  },
+  "keywords": [
+    "restify",
+    "ldap",
+    "bimedia"
+  ],
+  "author": {
+    "name": "Sébastien Boucontet"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^2.0.1",
+    "ldapjs": "^1.0.0",
+    "lru-cache": "^4.0.1",
+    "restify-errors": "^4.2.3"
+  },
+  "devDependencies": {
+    "nodeunit": "^0.9.1",
+    "restify": "^4.0.3"
+  }
+}
